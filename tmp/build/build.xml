@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="test.com" default="build" basedir=".">
+
+    <target name="build" depends="copy, symlink"/>
+
+    <tstamp>
+        <format property="DATE" pattern="%Y-%m-%d-%H-%M-%S"  locale="ru" />
+    </tstamp>
+
+    <target name="vars">
+        <resolvepath propertyName="target.dir" file="/var/www/html/PHP3/htdocs/${DATE}"/>
+        <echo msg="Target dir:   ${target.dir}"/>
+
+    </target>
+
+
+    <target name="copy" depends="vars">
+        <copy todir="${target.dir}">
+            <fileset dir="${project.basedir}">
+                <include name="**"/>
+            </fileset>
+
+        </copy>
+    </target>
+
+    <target name="composer">
+        <exec command="composer install" dir="${target.dir}" checkreturn="true" passthru="true" />
+
+    </target>
+
+    <target name="symlink">
+    <symlink target="${target.dir}" link="/var/www/html/PHP3/htdocs/current" overwrite="true"/>
+    </target>
+
+</project>
+
