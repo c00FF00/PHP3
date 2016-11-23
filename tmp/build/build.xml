@@ -11,7 +11,6 @@
     <target name="vars">
         <property name="root.dir" value="/var/www/html/PHP3/htdocs/"/>
         <resolvepath propertyName="target.dir" file="${root.dir}/${TimeStamp}"/>
-        <echo msg="Target dir:   ${target.dir}"/>
     </target>
 
     <target name="copy" depends="vars">
