@@ -2,7 +2,7 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <target name="build" depends="copy, symlink, composer"/>
+    <target name="build" depends="setdomainname, copy, composer, symlink"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
@@ -10,7 +10,7 @@
 
     <target name="vars">
         <property name="domain" value="test.com"/>
-        <property name="root.dir" value="/var/www/html/PHP3/htdocs/"/>
+        <property name="root.dir" value="/var/www/html/PHP3/htdocs"/>
         <resolvepath propertyName="target.dir" file="${root.dir}/${TimeStamp}"/>
     </target>
 
@@ -22,11 +22,15 @@
         </copy>
     </target>
 
-    <target name="composer">
+    <target name="composer" depends="vars">
         <exec command="composer install" dir="${target.dir}" checkreturn="true" passthru="true"/>
     </target>
 
-    <target name="symlink">
+    <target name="setdomainname" depends="vars">
+        <echo file="config.txt" append="false" message="domainname: ${domain}"></echo>
+    </target>
+
+    <target name="symlink" depends="vars">
         <symlink target="${target.dir}" link="${root.dir}/current" overwrite="true"/>
     </target>
 
