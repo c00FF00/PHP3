@@ -9,6 +9,7 @@
     </tstamp>
 
     <target name="vars">
+        <property name="domain" value="test.com"/>
         <property name="root.dir" value="/var/www/html/PHP3/htdocs/"/>
         <resolvepath propertyName="target.dir" file="${root.dir}/${TimeStamp}"/>
     </target>
@@ -18,7 +19,6 @@
             <fileset dir="${project.basedir}">
                 <include name="**"/>
             </fileset>
-
         </copy>
     </target>
 
