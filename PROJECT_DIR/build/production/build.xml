@@ -10,8 +10,13 @@
 
     <target name="vars">
         <property name="domain" value="test.com"/>
+        <property name="configname" value="config.json"/>
         <property name="root.dir" value="/var/www/html/PHP3/htdocs"/>
         <resolvepath propertyName="target.dir" file="${root.dir}/${TimeStamp}"/>
+    </target>
+
+    <target name="setdomainname" depends="vars">
+        <exec command="php genconf.php ${configname} ${domain}" dir="${project.basedir}" />
     </target>
 
     <target name="copy" depends="vars">
@@ -24,10 +29,6 @@
 
     <target name="composer" depends="vars">
         <exec command="composer install" dir="${target.dir}" checkreturn="true" passthru="true"/>
-    </target>
-
-    <target name="setdomainname" depends="vars">
-        <echo file="config.txt" append="false" message="domainname: ${domain}"></echo>
     </target>
 
     <target name="symlink" depends="vars">
