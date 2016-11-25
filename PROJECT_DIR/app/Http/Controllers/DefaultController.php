@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     public function index()
     {
-        $domain = configOptions::domain();
+        $domain = config('app.domain');
         return view('index')->with(compact('domain'));
     }
 }

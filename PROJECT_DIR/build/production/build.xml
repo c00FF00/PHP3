@@ -2,7 +2,7 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <target name="build" depends="setdomainname, copy, composer, symlink"/>
+    <target name="build" depends="copy, configs, composer, symlink"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
@@ -15,15 +15,22 @@
         <resolvepath propertyName="target.dir" file="${root.dir}/${TimeStamp}"/>
     </target>
 
-    <target name="setdomainname" depends="vars">
-        <exec command="php genconf.php ${configname} ${domain}" dir="${project.basedir}" />
-    </target>
-
     <target name="copy" depends="vars">
         <copy todir="${target.dir}">
             <fileset dir="${project.basedir}">
                 <include name="**"/>
+                <exclude name="vendor/**"/>
             </fileset>
+        </copy>
+    </target>
+
+    <target name="configs" depends="vars">
+        <copy todir="${target.dir}/config" file="${project.basedir}/config/app.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="{{" endtoken="}}">
+                    <token key="domain" value="${domain}"/>
+                </replacetokens>
+            </filterchain>
         </copy>
     </target>
 
