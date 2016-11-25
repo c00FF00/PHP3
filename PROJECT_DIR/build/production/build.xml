@@ -46,7 +46,7 @@
     </target>
 
     <target name="postdeploy">
-        <exec command="php artisan migrate" dir="${target.dir}" checkreturn="true" passthru="true"/>
+        <exec command="php artisan migrate:refresh --seed" dir="${target.dir}" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="symlink" depends="vars">
