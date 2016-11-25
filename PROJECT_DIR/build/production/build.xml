@@ -2,7 +2,7 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <target name="build" depends="copy, configs, composer, symlink"/>
+    <target name="build" depends="copy, configs, composer, postdeploy, symlink"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
@@ -43,6 +43,10 @@
 
     <target name="composer" depends="vars">
         <exec command="composer install" dir="${target.dir}" checkreturn="true" passthru="true"/>
+    </target>
+
+    <target name="postdeploy">
+        <exec command="php artisan migrate" dir="${target.dir}" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="symlink" depends="vars">
