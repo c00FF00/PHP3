@@ -32,6 +32,13 @@
                 </replacetokens>
             </filterchain>
         </copy>
+        <copy todir="${target.dir}/config" file="${project.basedir}/config/database.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="{{" endtoken="}}">
+                    <token key="mysqldbpassw" value="${mysqldbpassw}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
     </target>
 
     <target name="composer" depends="vars">
