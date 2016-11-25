@@ -13,6 +13,7 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'User1',
+            'users_id' => '1',
         ]);
     }
 }
