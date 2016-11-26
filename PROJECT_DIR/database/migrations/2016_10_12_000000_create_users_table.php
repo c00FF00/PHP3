@@ -15,10 +15,11 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('users_id')->index();
+            $table->integer('roles_id')->unsigned();
             $table->string('name');
             $table->rememberToken();
             $table->timestamps();
+            $table->foreign('roles_id')->references('id')->on('roles');
         });
     }
 
