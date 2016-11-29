@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     protected $table = 'users';
-    protected $fillable = ['user', 'roles_id'];
+    protected $fillable = ['name', 'patronymic', 'family', 'email', 'roles_id'];
 
-    public function Roles()
+    public function roles()
     {
         return $this->belongsTo('App\Roles', 'roles_id');
     }
