@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
             'family' => 'Петров',
             'email' => 'root@localhost',
             'roles_id' => '1',
-
         ]);
     }
 }
