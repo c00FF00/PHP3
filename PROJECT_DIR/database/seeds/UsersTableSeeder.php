@@ -18,5 +18,30 @@ class UsersTableSeeder extends Seeder
             'email' => 'root@localhost',
             'roles_id' => '1',
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Имя',
+            'patronymic' => 'Отчество',
+            'family' => 'Фамилия',
+            'email' => 'root@localhost',
+            'roles_id' => '2',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Имя',
+            'patronymic' => '',
+            'family' => 'Фамилия',
+            'email' => 'root@localhost',
+            'roles_id' => '2',
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Имя',
+            'patronymic' => 'Отчество',
+            'family' => '',
+            'email' => 'root@localhost',
+            'roles_id' => '2',
+        ]);
+        
     }
 }
