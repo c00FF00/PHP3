@@ -19,6 +19,6 @@ class UsersTestEmail extends TestCase
 
     public function testEmail()
     {
-        $this->assertEquals('root@localhost', $this->users->find(4)->detail());
+        $this->assertEquals('root@localhost', $this->users->detail('', 'Отчество','Фамилия', 'root@localhost'));
     }
 }

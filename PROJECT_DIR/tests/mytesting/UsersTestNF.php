@@ -13,6 +13,6 @@ class UsersTestNF extends TestCase
 
     public function testNameFamily()
     {
-        $this->assertEquals('Имя Фамилия', $this->users->find(3)->detail());
+        $this->assertEquals('Имя Фамилия', $this->users->detail('Имя', '', 'Фамилия', 'root@localhost'));
     }
 }

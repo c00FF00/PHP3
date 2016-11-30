@@ -15,20 +15,20 @@ class Users extends Model
         return $this->belongsTo('App\Roles', 'roles_id');
     }
 
-    public function detail()
+    public function detail($name, $patronymic, $family, $email)
     {
 
-        if (!empty($this->name) && !empty($this->patronymic) && !empty($this->family)) {
+        if (!empty($name) && !empty($patronymic) && !empty($family)) {
 
-            return $this->name . ' ' . $this->patronymic . ' ' . $this->family;
+            return $name . ' ' . $patronymic . ' ' . $family;
 
-        } elseif (!empty($this->name) && !empty($this->family)) {
+        } elseif (!empty($name) && !empty($family)) {
 
-            return $this->name . ' ' . $this->family;
+            return $name . ' ' . $family;
 
-        } elseif (empty($this->name) || empty($this->family)) {
+        } elseif (empty($name) || empty($family)) {
 
-            return $this->email;
+            return $email;
 
         } else {
 
