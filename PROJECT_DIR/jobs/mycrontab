@@ -1,4 +1,6 @@
-PATH=/usr/sbin:/usr/sbin:/usr/bin:/sbin:/bin
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
 # It sends report of site visitors every 30 min.
-*/30 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 60 2
+*/30 * * * * root php /var/opt/jobs/reportmailer.php > /dev/null
+
+

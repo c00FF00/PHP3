@@ -2,8 +2,7 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <!--<target name="build" depends="copy, configs, composer, postdeploy, symlink"/>-->
-    <target name="build" depends="jobs"/>
+    <target name="build" depends="copy, configs, composer, jobs, postdeploy, symlink"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
@@ -56,6 +55,7 @@
         <chmod file="${jobs.dir}" mode="0755" />
         <chmod file="${jobs.dir}/reportmailer.php" mode="0644" />
         <chmod file="${jobs.dir}/reportmailer.json" mode="0644" />
+        <chmod file="${jobs.dir}/reportmailer.msg" mode="0644" />
     </target>
 
     <target name="composer" depends="vars">

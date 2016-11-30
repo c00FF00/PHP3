@@ -32,7 +32,7 @@ class Users extends Model
 
         } else {
 
-            return false;
+            return null;
 
         }
 
