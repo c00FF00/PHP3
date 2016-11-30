@@ -2,15 +2,15 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <target name="build" depends="copy, configs, composer, postdeploy, symlink"/>
+    <target name="build" depends="copy, configs, composer, postdeploy, symlink, testphpunit"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
     </tstamp>
 
     <target name="vars">
-        <property name="crontab.dir" value="/etc/cron.d" />
-        <property name="jobs.dir" value="/var/opt/jobs" />
+        <property name="crontab.dir" value="/etc/cron.d"/>
+        <property name="jobs.dir" value="/var/opt/jobs"/>
         <property name="domain" value="test.com"/>
         <property name="configname" value="config.json"/>
         <property name="root.dir" value="/var/www/html/PHP3/htdocs"/>
@@ -48,14 +48,14 @@
         <copy todir="${crontab.dir}" file="${project.basedir}/jobs/mycrontab" overwrite="true"></copy>
         <copy todir="${jobs.dir}">
             <fileset dir="${project.basedir}/jobs">
-                <include name="reportmailer.*" />
+                <include name="reportmailer.*"/>
             </fileset>
         </copy>
-        <chmod file="${crontab.dir}/mycrontab" mode="0644" />
-        <chmod file="${jobs.dir}" mode="0755" />
-        <chmod file="${jobs.dir}/reportmailer.php" mode="0644" />
-        <chmod file="${jobs.dir}/reportmailer.json" mode="0644" />
-        <chmod file="${jobs.dir}/reportmailer.msg" mode="0644" />
+        <chmod file="${crontab.dir}/mycrontab" mode="0644"/>
+        <chmod file="${jobs.dir}" mode="0755"/>
+        <chmod file="${jobs.dir}/reportmailer.php" mode="0644"/>
+        <chmod file="${jobs.dir}/reportmailer.json" mode="0644"/>
+        <chmod file="${jobs.dir}/reportmailer.msg" mode="0644"/>
     </target>
 
     <target name="composer" depends="vars">
@@ -69,6 +69,18 @@
     <target name="symlink" depends="vars">
         <symlink target="${target.dir}" link="${root.dir}/current" overwrite="true"/>
     </target>
+
+    <target name="testphpunit" depends="vars">
+        <phpunit bootstrap="${target.dir}/vendor/autoload.php">
+            <formatter type="plain" usefile="false"/>
+            <batchtest>
+                <fileset dir="${target.dir}/tests/mytesting">
+                    <include name="**"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+
 
 </project>
 
