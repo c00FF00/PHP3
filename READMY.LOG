@@ -1,0 +1,45 @@
+test.com > postdeploy:
+
+**************************************
+*     Application In Production!     *
+**************************************
+
+ Do you really wish to run this command? (yes/no) [no]:
+ > yes
+
+Migration table created successfully.
+Migrated: 2016_09_25_074623_create_roles_table
+Migrated: 2016_10_12_000000_create_users_table
+Seeded: RolesTableSeeder
+Seeded: UsersTableSeeder
+
+test.com > jobs:
+
+     [copy] Copying 1 file to /etc/cron.d
+    [chmod] Changed file mode on '/etc/cron.d/mycrontab' to 644
+    [chmod] Changed file mode on '/var/opt/jobs' to 755
+    [chmod] Changed file mode on '/var/opt/jobs/reportmailer.php' to 644
+    [chmod] Changed file mode on '/var/opt/jobs/reportmailer.json' to 644
+    [chmod] Changed file mode on '/var/opt/jobs/reportmailer.msg' to 644
+
+test.com > symlink:
+
+  [symlink] Link removed: /var/www/html/PHP3/htdocs/current
+  [symlink] Linking: /var/www/html/PHP3/htdocs/2016-12-01-10-42-53 to /var/www/html/PHP3/htdocs/current
+
+test.com > testphpunit:
+
+  [phpunit] Testsuite: UsersTestEmail
+  [phpunit] Tests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,09991 s
+  [phpunit] Testsuite: UsersTestNPF
+  [phpunit] Tests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,01540 s
+  [phpunit] Testsuite: UsersTestNF
+  [phpunit] Tests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,01512 s
+
+test.com > build:
+
+
+BUILD FINISHED
+
+Total time: 32,8121 seconds
+

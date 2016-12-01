@@ -2,7 +2,7 @@
 
 <project name="test.com" default="build" basedir=".">
 
-    <target name="build" depends="copy, configs, composer, postdeploy, symlink, testphpunit"/>
+    <target name="build" depends="copy, configs, composer, postdeploy, jobs, symlink, testphpunit"/>
 
     <tstamp>
         <format property="TimeStamp" pattern="%Y-%m-%d-%H-%M-%S" locale="ru"/>
@@ -63,7 +63,7 @@
     </target>
 
     <target name="postdeploy">
-        <exec command="php artisan migrate:refresh --seed" dir="${target.dir}" checkreturn="true" passthru="true"/>
+        <exec command="php artisan migrate --seed" dir="${target.dir}" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="symlink" depends="vars">
@@ -80,7 +80,6 @@
             </batchtest>
         </phpunit>
     </target>
-
 
 </project>
 

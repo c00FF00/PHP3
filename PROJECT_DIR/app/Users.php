@@ -15,7 +15,7 @@ class Users extends Model
         return $this->belongsTo('App\Roles', 'roles_id');
     }
 
-    public function detail($name, $patronymic, $family, $email)
+    public static function detail($name, $patronymic, $family, $email)
     {
 
         if (!empty($name) && !empty($patronymic) && !empty($family)) {
