@@ -45,7 +45,7 @@
     </target>
 
     <target name="jobs" depends="vars">
-        <copy todir="${crontab.dir}" file="${project.basedir}/jobs/mycrontab" overwrite="true"></copy>
+        <copy todir="${crontab.dir}" file="${project.basedir}/build/production/mycrontab" overwrite="true"></copy>
         <copy todir="${jobs.dir}">
             <fileset dir="${project.basedir}/jobs">
                 <include name="reportmailer.*"/>
@@ -63,7 +63,7 @@
     </target>
 
     <target name="postdeploy">
-        <exec command="php artisan migrate --seed" dir="${target.dir}" checkreturn="true" passthru="true"/>
+        <exec command="php artisan migrate:refresh --seed" dir="${target.dir}" checkreturn="true" passthru="true"/>
     </target>
 
     <target name="symlink" depends="vars">
