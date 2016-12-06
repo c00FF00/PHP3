@@ -1,0 +1,50 @@
+[00;36mBuildfile: /var/www/html/PHP3/PROJECT_DIR/build/production/build.xml[0m
+[00;32m
+test.com > vars:
+[0m
+[00;32m
+test.com > copy:
+[0m
+[00;36mCreated 44 empty directories in /var/www/html/PHP3/htdocs/2016-12-06-14-02-43[0m
+[00;36mCopying 86 files to /var/www/html/PHP3/htdocs/2016-12-06-14-02-43[0m
+[00;32m
+test.com > configs:
+[0m
+[00;36mCopying 1 file to /var/www/html/PHP3/htdocs/2016-12-06-14-02-43/config[0m
+[00;36mCopying 1 file to /var/www/html/PHP3/htdocs/2016-12-06-14-02-43/config[0m
+[00;32m
+test.com > composer:
+[0m
+[00;32m
+test.com > postdeploy:
+[0m
+[00;32m
+test.com > jobs:
+[0m
+[00;36mCopying 1 file to /etc/cron.d[0m
+[00;36mCopying 1 file to /var/opt/jobs[0m
+[00;36mChanged file mode on '/etc/cron.d/mycrontab' to 644[0m
+[00;36mChanged file mode on '/var/opt/jobs' to 755[0m
+[00;36mChanged file mode on '/var/opt/jobs/reportmailer.php' to 644[0m
+[00;32m
+test.com > symlink:
+[0m
+[00;36mLink removed: /var/www/html/PHP3/htdocs/current[0m
+[00;36mLinking: /var/www/html/PHP3/htdocs/2016-12-06-14-02-43 to /var/www/html/PHP3/htdocs/current[0m
+[00;32m
+test.com > testphpunit:
+[0m
+[00;36mTestsuite: UsersTestEmail[0m
+[00;36mTests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,10146 s[0m
+[00;36mTestsuite: UsersTestNPF[0m
+[00;36mTests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,01538 s[0m
+[00;36mTestsuite: UsersTestNF[0m
+[00;36mTests run: 1, Failures: 0, Errors: 0, Incomplete: 0, Skipped: 0, Time elapsed: 0,01539 s[0m
+[00;32m
+test.com > build:
+[0m
+[00;32m
+BUILD FINISHED
+
+Total time: 22,9981 seconds
+[0m

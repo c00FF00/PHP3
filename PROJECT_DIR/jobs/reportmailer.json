@@ -1,7 +1,0 @@
-{
-  "to": "root@localhost",
-  "from": "webmaster@localhost",
-  "replyto": "webmaster@localhost",
-  "subject": "Visitors site report",
-  "messagefile": "/var/opt/jobs/reportmailer.msg"
-}
