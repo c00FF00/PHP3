@@ -1,14 +1,15 @@
 <?php
 
-require __DIR__ . '/classes/TextHandler.php';
+require __DIR__ . '/classes/TextHndlr.php';
 
-$handler = new TextHandler();
+$handler = new TextHndlr();
 
-$handler->text = file_get_contents('/var/www/html/PHP3/htdocs/current/app/Mail/reportvisitors.php');
-$handler->text = $handler->makeLine();
-$handler->text = $handler->spacesToOneSpace();
-$handler->text = $handler->semicolonToOneSpace();
+$path ='/var/www/html/PHP3/htdocs/current/app/Mail/reportvisitors.php';
 
-$result = $handler->makeArrayOfLines($handler->text, ' $');
+$handler->text = file_get_contents($path);
+
+$text = $handler->makeLine()->spacesToOneSpace()->semicolonToOneSpace()->getText();
+
+$result = $handler->makeArrayOfLines($text, ' $');
 
 echo $handler->searchMaxChain($result, '->');
