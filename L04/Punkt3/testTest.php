@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-require __DIR__ . '/Test.php';
+require __DIR__ . '/classes/Test.php';
 
 $format1 = "Запрошено приложением байт%'.20d" . PHP_EOL;
 $format2 = "Выделено PHP байт.........%'.20d" . PHP_EOL;

@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/TextHandler.php';
+require __DIR__ . '/classes/TextHandler.php';
 
 $handler = new TextHandler();
 
