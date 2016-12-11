@@ -15,6 +15,12 @@ class Users extends Model
         return $this->belongsTo('App\Roles', 'roles_id');
     }
 
+
+
+    /**
+     * @template "$firstName $lastName"
+     *
+     */
     public static function detail($name, $patronymic, $family, $email)
     {
 
