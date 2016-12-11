@@ -33,6 +33,12 @@ class UsersTestNF extends TestCase
         preg_match('/' . $pattern . '/', $this->comment, $result);
         preg_replace('/\s+/', ' ', $result[0]);
         $tmp = str_replace('"', '', $result[0]);
-        return explode(' ', $tmp);
+        $res =  explode(' ', $tmp);
+        foreach ($res as $r)
+        {
+            if ($r == '$firstName') {
+            }
+        }
+//        return $res;
     }
 }
