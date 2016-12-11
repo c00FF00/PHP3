@@ -34,11 +34,13 @@ class UsersTestNF extends TestCase
         preg_replace('/\s+/', ' ', $result[0]);
         $tmp = str_replace('"', '', $result[0]);
         $res =  explode(' ', $tmp);
-        foreach ($res as $r)
-        {
-            if ($r == '$firstName') {
-            }
-        }
+        unset($res[0]);
+        return $res;
+//        foreach ($res as $r)
+//        {
+//            if ($r == '$firstName') {
+//            }
+//        }
 //        return $res;
     }
 }
