@@ -21,7 +21,7 @@ class Users extends Model
      * @template "$firstName $lastName"
      *
      */
-    public static function detail($name, $patronymic, $family, $email)
+    public static function getFullName($name, $patronymic, $family, $email)
     {
 
         if (!empty($name) && !empty($patronymic) && !empty($family)) {

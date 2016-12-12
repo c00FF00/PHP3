@@ -6,24 +6,27 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UsersTestNF extends TestCase
 {
-  
+
     protected $comment = '';
-    protected $firstName = 'Имя';
-    protected $lastName = 'Фамилия';
+    protected $firstName = '';
+    protected $lastName = '';
+    protected $patronymic = '';
+    protected $email = 'root@localhost';
+    protected $template = 'template';
 
     public function __construct()
     {
 
         $reflect = new ReflectionMethod('App\Users', 'detail');
         $this->comment = $reflect->getDocComment();
-        var_dump($this->getTagComment('template')); die;
+        $this->setPropertiesValue();
 
     }
 
 
     public function testNameFamily()
     {
-        $this->assertEquals('Имя Фамилия', App\Users::detail('Имя', '', 'Фамилия', 'root@localhost'));
+        $this->assertEquals('Имя Фамилия', App\Users::detail($this->firstName, $this->patronymic, $this->lastName, $this->email));
     }
 
     public function getTagComment($commentkey)
@@ -33,14 +36,38 @@ class UsersTestNF extends TestCase
         preg_match('/' . $pattern . '/', $this->comment, $result);
         preg_replace('/\s+/', ' ', $result[0]);
         $tmp = str_replace('"', '', $result[0]);
-        $res =  explode(' ', $tmp);
+        $res = explode(' ', $tmp);
         unset($res[0]);
         return $res;
-//        foreach ($res as $r)
-//        {
-//            if ($r == '$firstName') {
-//            }
-//        }
-//        return $res;
+
+    }
+
+    protected function setValue($key, $firstName, $patronymic, $lastName )
+    {
+
+        switch ($key) {
+            case '$firstName' :
+                $this->firstName = $firstName;
+                break;
+            case '$lastName':
+                $this->lastName = $lastName;
+                break;
+            case '$patronymic':
+                $this->patronymic = $patronymic;
+            default:
+                return false;
+
+        }
+
+    }
+
+    protected function setPropertiesValue()
+    {
+
+        foreach ($this->getTagComment($this->template) as $key)
+        {
+            $this->setValue($key, 'Имя', 'Отчество', 'Фамилия');
+        }
+
     }
 }
