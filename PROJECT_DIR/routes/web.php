@@ -12,3 +12,13 @@
 */
 
 Route::get('/', 'DefaultController@index');
+Route::any('server', 'DefaultController@server');
+Route::any('client', 'DefaultController@client');
+
+
+
+
+
+
+
+
