@@ -18,7 +18,7 @@ class CreateMailqueueTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('emailpattern')->nullable();
             $table->string('bodymessage')->nullable();
-            $table->string('status')->default('tosend');
+            $table->string('status')->default('expect');
             $table->rememberToken();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
