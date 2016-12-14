@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\EmailToSend;
 use App\Config;
 use App\configOptions;
 use Illuminate\Http\Request;
@@ -15,16 +16,25 @@ class DefaultController extends Controller
         return view('index')->with(compact('domain'));
     }
 
-    public function server()
+    public function emailservice()
     {
+        $email = new EmailToSend();
+        
         $data = json_decode(file_get_contents('php://input'));
-        var_dump($data); echo $data->fooo;
+        
+        $email->bodymessage = $data->fooo;
+        $email->user_id = 1;
+        $email->emailpattern = 'bestseller';
+        $email->bodymessage = $data->dddd;
+        $email->save();
+
+       // var_dump($data); echo $data->fooo;
 //        $data->fooo = $data->fooo;
     }
 
     public function client()
     {
-        $url = 'http://localhost/server';
+        $url = 'http://localhost/server/emailservice';
         $data = ['fooo' => 42, 'dddd' => 'Опоздал'];
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
