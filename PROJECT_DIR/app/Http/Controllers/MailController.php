@@ -34,7 +34,7 @@ class MailController extends Controller
                     $recipientEmail->status = 'sent';
                     $recipientEmail->save();
 
-                } finally {
+                } catch (Exception $e) {
 
                     $recipientEmail->status = 'error';
                     $recipientEmail->save();

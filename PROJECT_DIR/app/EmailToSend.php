@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class EmailToSend extends Model
 {
     protected $table = 'mailqueue';
-    protected $fillable = ['user_id', 'bodymessage', 'emailpattern', 'status'];
+    protected $fillable = ['user_id', 'emailto', 'bodymessage', 'emailpattern', 'status'];
 
     public function user()
     {

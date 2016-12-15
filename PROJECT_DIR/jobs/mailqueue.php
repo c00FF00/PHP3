@@ -1,5 +1,5 @@
 <?php
 
-include '{{mailquue.path}}';
+include '{{mailqueue.path}}';
 
 ?>

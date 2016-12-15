@@ -16,6 +16,7 @@ class CreateMailqueueTable extends Migration
         Schema::create('mailqueue', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
+            $table->string('emailto')->nullable();
             $table->string('emailpattern')->nullable();
             $table->string('bodymessage')->nullable();
             $table->string('status')->default('expect');
