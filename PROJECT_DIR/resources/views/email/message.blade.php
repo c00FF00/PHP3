@@ -5,6 +5,11 @@
     <title>Сообщение</title>
 </head>
 <body>
-{{ $bodymessage }}
+
+<h2>Дорогой {{ $username }}</h2>
+
+
+<p>{{ $body }}</p>
+
 </body>
 </html>

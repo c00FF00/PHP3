@@ -12,6 +12,7 @@
         <property name="crontab.dir" value="/etc/cron.d"/>
         <property name="jobs.dir" value="/var/opt/jobs"/>
         <property name="report.path" value="current/app/Mail/reportvisitors.php" />
+        <property name="mailqueue.path" value="current/app/Mail/consoleMailQueue.php" />
         <property name="domain" value="test.com"/>
         <property name="configname" value="config.json"/>
         <property name="root.dir" value="/var/www/html/PHP3/htdocs"/>
@@ -51,6 +52,13 @@
             <filterchain>
                 <replacetokens begintoken="{{" endtoken="}}">
                     <token key="report.path" value="${root.dir}/${report.path}"/>
+                </replacetokens>
+            </filterchain>
+        </copy>
+        <copy todir="${jobs.dir}" file="${project.basedir}/jobs/mailqueue.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="{{" endtoken="}}">
+                    <token key="report.path" value="${root.dir}/${mailqueue.path}"/>
                 </replacetokens>
             </filterchain>
         </copy>

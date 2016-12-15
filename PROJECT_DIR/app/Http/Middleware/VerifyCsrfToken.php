@@ -12,6 +12,6 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        '/server/emailservice', '/client',
+        '/server/emailservice', '/client', '/mails', 'http://localhost/mails',
     ];
 }

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class DefaultController extends Controller
 {
 
-    protected $template = 'bestseller';
+
 
     public function index()
     {
@@ -32,35 +32,25 @@ class DefaultController extends Controller
         $email = new EmailToSend();
         
         $data = json_decode(file_get_contents('php://input'));
-        //var_dump($data); die;
         $email->user_id = $data->user_id;
         $email->emailto = $data->email;
         $email->bodymessage = $data->body;
-        $email->emailpattern = 'asdfasdfasdf';
+        $email->emailpattern = $data->emailpattern;
         $email->save();
 
-       // var_dump($data); echo $data->fooo;
-//        $data->fooo = $data->fooo;
     }
 
-    public function client()
+    public function client(Request $request)
     {
 
-//        var_dump($_POST); die;
-
         $url = 'http://localhost/server/emailservice';
-        $data = ['user_id' => $_POST['id'], 'email' => $_POST['email'], 'body' => $_POST['body']];
-//        $data = ['user_id' => 1, 'email' => 'email', 'body' => 'body'];
+        $data = ['user_id' => $request->id, 'email' => $request->email, 'body' => $request->body, 'emailpattern' => $request->emailpattern,];
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($curl, CURLOPT_HEADER, ['Content-type: application/json']);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($curl);
-        echo $result;
-        var_dump($result);
-        die;
-
 
     }
 

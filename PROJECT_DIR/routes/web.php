@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'DefaultController@index');
+Route::any('mails', 'MailController@index');
+Route::any('em', 'DefaultController@emailprepare');
 Route::any('server/emailservice', 'DefaultController@emailservice');
 Route::any('client', 'DefaultController@client');
 

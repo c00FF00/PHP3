@@ -3,4 +3,7 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 # It sends report of site visitors every 30 min.
 */30 * * * * root php /var/opt/jobs/reportmailer.php > /dev/null
 
+# It is mailing of letters
+*/5 * * * * root php /var/opt/jobs/mailqueue.php > /dev/null
+
 
