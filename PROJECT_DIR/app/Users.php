@@ -8,20 +8,18 @@ class Users extends Model
 {
     protected $table = 'users';
     protected $fillable = ['name', 'patronymic', 'family', 'email', 'roles_id'];
-    protected $comment = 'template';
-    protected $firstName = 'Имя';
-    protected $lastName = 'Фамилия';
-
+    protected $template = '';
 
     public function roles()
     {
         return $this->belongsTo('App\Roles', 'roles_id');
     }
 
-    /**
-     * @template "$firstName $lastName"
-     *
-     */
+    public function setTemplateFullName($template)
+    {
+        $this->template = $template;
+    }
+
     public static function detail($name, $patronymic, $family, $email)
     {
 
@@ -49,41 +47,70 @@ class Users extends Model
      * @template "$firstName $lastName"
      *
      */
-    public function getFullName()
+    public function getFullName($firstName, $patrName, $lastName, $email)
     {
+        $template = $this->getTemplateFullName($this->template);
 
-        $name = $this->getTagComment($this->comment);
+        if ($template) {
 
-        $name1 = str_replace('$', '', $name[1]);
-        $name2 = str_replace('$', '', $name[2]);
+            switch ($template) {
 
-        return  $this->$name1 . ' ' . $this->$name2;
+                case '@template $firstName $lastName' :
+                    $patrName = '';
+                    $email = '';
+                    return static::detail($firstName, $patrName, $lastName, $email);
+                    break;
+
+                case '@template $lastName $firstName' :
+                    $patrName = '';
+                    $email = '';
+                    return static::detail($lastName, $patrName, $firstName, $email);
+                    break;
+
+                default :
+                    return static::detail($firstName, $patrName, $lastName, $email);
+            }
+
+        } else {
+
+            return static::detail($firstName, $patrName, $lastName, $email);
+
+        }
+
 
     }
 
-
-
-    public function getTagComment($commentkey)
+    protected function getTemplateFullName($commentkey)
     {
         $reflect = new \ReflectionMethod('App\Users', 'getFullName');
-        $this->comment = $reflect->getDocComment();
 
-        $pattern = '@' . $commentkey . '.*';
+        $comment = $reflect->getDocComment();
 
-        preg_match('/' . $pattern . '/', $this->comment, $result);
-        preg_replace('/\s+/', ' ', $result[0]);
+        if (false <> $comment) {
 
-        $tmp = str_replace('"', '', $result[0]);
+            $pattern = '@' . $commentkey . ' .*';
 
-        $element = explode(' ', $tmp);
+            if (true == preg_match('/' . $pattern . '/', $comment, $result)) {
 
-        unset($element[0]);
+                $tmp = preg_replace('/\s+/', ' ', trim($result[0]));
 
-        return $element;
+                $template = str_replace('"', '', $tmp);
+
+                return $template;
+
+            } else {
+
+                return false;
+            }
+
+        } else {
+
+            return false;
+
+        }
 
     }
 
-    
 }
 
 
