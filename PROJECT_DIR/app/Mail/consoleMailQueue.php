@@ -7,4 +7,3 @@ curl_setopt($curl, CURLOPT_HEADER, ['Content-type: application/json']);
 curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec($curl);
-?>

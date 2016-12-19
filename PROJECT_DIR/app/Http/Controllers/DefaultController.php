@@ -37,20 +37,29 @@ class DefaultController extends Controller
         $email->bodymessage = $data->body;
         $email->emailpattern = $data->emailpattern;
         $email->save();
-
+        
     }
 
     public function client(Request $request)
     {
 
         $url = 'http://localhost/server/emailservice';
-        $data = ['user_id' => $request->id, 'email' => $request->email, 'body' => $request->body, 'emailpattern' => $request->emailpattern,];
+        $data = ['user_id' => $request->id, 'email' => $request->email, 'body' => $request->body, 'emailpattern' => $request->emailpattern];
+
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($curl, CURLOPT_HEADER, ['Content-type: application/json']);
         curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($curl);
+        $answer = trim(explode(PHP_EOL, $result)[0]);
+        $waiting = 'HTTP/1.1 200 OK';
+
+        if ($answer === $waiting) {
+            return 'OK';
+        } else {
+            return 'ERR';
+        }
 
     }
 

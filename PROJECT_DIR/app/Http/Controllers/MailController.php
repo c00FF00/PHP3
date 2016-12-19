@@ -38,6 +38,7 @@ class MailController extends Controller
 
                     $recipientEmail->status = 'error';
                     $recipientEmail->save();
+                    
 
                 }
 
