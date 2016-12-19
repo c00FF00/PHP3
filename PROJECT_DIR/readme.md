@@ -1,5 +1,6 @@
 ДЗ 1.
 
+Прошу переоценить это ДЗ.
 
 1. https://github.com/c00FF00/PHP3/blob/master/PROJECT_DIR/config/app.php
 
