@@ -43,8 +43,7 @@ class mailToBase
         $this->message_body = $message_body;
         return $this;
     }
-
-
+    
     public function setMessagePattern($message_pattern)
     {
         $this->message_pattern = $message_pattern;
