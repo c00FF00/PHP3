@@ -2,7 +2,7 @@
 
 require (__DIR__ . '/Classes/mailToBase.php');
 
-$rr = new mailToBase('http://localhost:9925/mail');
+$rr = new mailToBase('http://localhost:8000');
 
 $rr->setCommand('commandPut')
     ->setMessageId()

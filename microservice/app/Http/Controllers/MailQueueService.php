@@ -2,41 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
-use Laravel\Lumen\Routing\Controller as BaseController;
 use App\MailQueue;
-use Mockery\CountValidator\Exception;
+use Illuminate\Http\Request;
+use Laravel\Lumen\Routing\Controller;
 
-class MailQueueService extends BaseController
+
+class MailQueueService extends Controller
 {
 
-    public function index()
+    public function create(Request $request)
     {
         $validCommand = 'commandPut';
 
-        $data = json_decode(file_get_contents('php://input'));
-
-        if ($data->command == $validCommand) {
+        if ($request->command == $validCommand) {
 
             $email = new MailQueue();
 
-            $email->message_id = $data->message_id;
+            $email->message_id = $request->message_id;
 
-            $email->message_body = $data->message_body;
+            $email->message_body = $request->message_body;
 
-            $email->message_pattern = $data->message_pattern;
+            $email->message_pattern = $request->message_pattern;
 
-            $email->user_name = $data->user_name;
+            $email->user_name = $request->user_name;
 
-            if ($this->isValidEmail($data->email_to)) {
+            if ($this->isValidEmail($request->email_to)) {
 
-                $email->email_to = $data->email_to;
+                $email->email_to = $request->email_to;
 
             } else {
 
-                return response()->json(['answer' => 'Error: E-mail is not valid.']);
-
+                return response()->json(['answer' => 'Error: e-mail is not valid.']);
             }
 
             try {
@@ -45,36 +41,23 @@ class MailQueueService extends BaseController
 
                 return response()->json(['answer' => '200']);
 
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
 
-                return response()->json(['answer' => $e->getMessage()]);
+                return response()->json(['answer' => $e->getCode()]);
 
             }
+
         } else {
             
-            return response()->json(['answer' => 'Error: Service does not handles this request.']);
+            return response()->json(['answer' => 'Error: unknown command.']);
         }
     }
 
-    public function send()
-    {
-        $data = json_decode(file_get_contents('php://input'));
-        $validCommand = 'commandSend';
-
-        if ($validCommand == $data->command) {
-
-            return response()->json(['answer' => '200']);
-
-        }
-
-
-    }
-
-
-    public function isValidEmail($email)
+    protected function isValidEmail($email)
     {
 
         return filter_var($email, FILTER_VALIDATE_EMAIL);
 
     }
+
 }

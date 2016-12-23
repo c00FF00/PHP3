@@ -95,13 +95,7 @@ class mailToBase
 
         if (is_null($data)) {
 
-            return '500';
-
-        }
-
-        if ($okCode == $data->answer) {
-
-            return $okCode;
+            return null;
 
         } else {
 
