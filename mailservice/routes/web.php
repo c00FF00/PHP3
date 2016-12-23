@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::any('/send', 'MailService@send');
 Route::any('/mail', 'MailService@index');
