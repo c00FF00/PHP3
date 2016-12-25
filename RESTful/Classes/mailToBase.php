@@ -14,11 +14,15 @@ class mailToBase
     protected $user_name = '';
     protected $command = '';
     protected $status = '';
+    protected $method = '';
 
     public function __construct($host, $port)
     {
 	$this->url = 'http://' . $host . ':' . $port;
     }
+
+
+  
 
     public function setCommand($command)
     {
@@ -87,7 +91,7 @@ class mailToBase
         
         $curl = curl_init($this->url . '/' . $urlpath);
 
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper($method));
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper($this->getMethod()));
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
