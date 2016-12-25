@@ -13,6 +13,7 @@ class mailToBase
     protected $message_pattern = '';
     protected $user_name = '';
     protected $command = '';
+    protected $status = '';
 
     public function __construct($url)
     {
@@ -22,6 +23,12 @@ class mailToBase
     public function setCommand($command)
     {
         $this->command = $command;
+        return $this;
+    }
+
+    public function setStatus($status)
+    {
+        $this->status = $status;
         return $this;
     }
 
@@ -81,7 +88,7 @@ class mailToBase
 
         $curl = curl_init($this->url);
 
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 

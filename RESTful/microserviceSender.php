@@ -7,7 +7,7 @@ $rr = new mailToBase('http://localhost:8000');
 $rr->setCommand('commandPut')
     ->setMessageId()
     ->setEmailto('root@localhost.ru')
-    ->setUserName('Петя')
+    ->setUserName('Петяdddddddddd')
     ->setMessageBody('Сообщениеееее')
     ->setMessagePattern('message');
 

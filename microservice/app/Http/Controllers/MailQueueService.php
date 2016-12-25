@@ -9,6 +9,40 @@ use Laravel\Lumen\Routing\Controller;
 
 class MailQueueService extends Controller
 {
+    public function index()
+    {
+        $message = MailQueue::all()->where('status', 'expect');
+
+        return response()->json(['answer' => $message]);
+    }
+
+    public function show($id)
+    {
+        $message = MailQueue::findorFail($id);
+
+        return response()->json(['answer' => $message]);
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $message = MailQueue::findorFail($id);
+
+        $message->status = $request->status;
+
+        try {
+
+            $message->save();
+
+            return response()->json(['answer' => '200']);
+
+        } catch (\Exception $e) {
+
+            return response()->json(['answer' => $e->getCode()]);
+
+        }
+
+    }
 
     public function create(Request $request)
     {
@@ -48,7 +82,7 @@ class MailQueueService extends Controller
             }
 
         } else {
-            
+
             return response()->json(['answer' => 'Error: unknown command.']);
         }
     }

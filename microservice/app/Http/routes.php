@@ -11,4 +11,7 @@
 |
 */
 
-$app->post('/', 'MailQueueService@create');
+$app->post('/message', 'MailQueueService@create');
+$app->get('/message', 'MailQueueService@index');
+$app->get('/message/{id}', 'MailQueueService@show');
+$app->put('/message/{id:[\d]+}', 'MailQueueService@update');
