@@ -15,9 +15,9 @@ class mailToBase
     protected $command = '';
     protected $status = '';
 
-    public function __construct($url)
+    public function __construct($host, $port)
     {
-        $this->url = $url;
+	$this->url = 'http://' . $host . ':' . $port;
     }
 
     public function setCommand($command)
@@ -82,13 +82,12 @@ class mailToBase
 
     }
 
-    public function sendRequest()
+    public function sendRequest($method, $urlpath)
     {
-        $okCode = '200';
+        
+        $curl = curl_init($this->url . '/' . $urlpath);
 
-        $curl = curl_init($this->url);
-
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'PUT');
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper($method));
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
