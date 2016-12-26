@@ -19,10 +19,6 @@ class Mailer extends Swift
         return $this;
     }
 
-public function Content()
-{
-    return $this->content;
-}
 
 
     public function Compose($to, $from, $subject)
@@ -32,7 +28,7 @@ public function Content()
              ->setSubject($subject)
              ->setFrom($from)
              ->setTo($to)
-             ->setBody($this->Content());
+             ->setBody($this->content);
         return $this;
 
     }

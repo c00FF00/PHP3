@@ -31,8 +31,11 @@ $mail = new Mailer('localhost', 25);
 
 //var_dump($mail->setReadReceiptTo('your@address.tld'));
 
+$obj = new Message('Петя', 'Сообщение большое', __DIR__ . '/templates/message.view.php');
 
-$mail->Compose('root@localhost', 'root@localhost', 'тест')
-     ->setContent(new Message('Петя', 'Сообщение большое', __DIR__ . '/templates/message.view.php'));
+$mail->SetContent($obj->message())->Compose('root@localhost', 'root@localhost', 'тест');
+
+
+//->setContent(new Message('Петя', 'Сообщение большое', __DIR__ . '/templates/message.view.php'));
 
 $mail->Send();

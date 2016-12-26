@@ -4,7 +4,7 @@ class Message
 {
 
     protected $name;
-    protected $message;
+    protected $body;
     protected $template;
 
     public function __construct($name, $message, $pathtotemplate)
@@ -13,9 +13,11 @@ class Message
         if (is_file($pathtotemplate)) {
 
             $this->name = $name;
-            $this->message = $message;
-            include $pathtotemplate;
-
+            $this->body = $message;
+            ob_start();
+	    include $pathtotemplate;
+	    $this->template = ob_get_contents();
+            ob_end_clean();
         } else {
 
             return false;
@@ -25,9 +27,12 @@ class Message
 
     }
 
+   public function message()
+{
 
-
+return $this->template;
 
 }
 
+}
 

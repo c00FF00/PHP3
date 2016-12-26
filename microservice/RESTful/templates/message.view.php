@@ -8,7 +8,7 @@
 
 <h2>Дорогой, <?php echo $this->name; ?></h2>
 
-<p><?php echo $this->message; ?></p>
+<p><?php echo $this->body; ?></p>
 
 
 </body>
