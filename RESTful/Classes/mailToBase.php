@@ -1,8 +1,5 @@
 <?php
 
-/**
- * Class mailToBase
- */
 class mailToBase
 {
 
