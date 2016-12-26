@@ -17,7 +17,7 @@ class MailQueueService extends Controller
 
     public function showstatus($status)
     {
-        $message = MailQueue::all()->where('status', $status);
+        $message = MailQueue::all()->where('status', $status)->pluck('id');
 
         return response()->json(['answer' => $message]);
     }
