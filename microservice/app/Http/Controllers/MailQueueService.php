@@ -6,12 +6,11 @@ use App\MailQueue;
 use Illuminate\Http\Request;
 use Laravel\Lumen\Routing\Controller;
 
-
 class MailQueueService extends Controller
 {
     public function index()
     {
-        $message = MailQueue::all()->where('status', 'expect');
+        $message = MailQueue::all();
 
         return response()->json(['answer' => $message]);
     }
