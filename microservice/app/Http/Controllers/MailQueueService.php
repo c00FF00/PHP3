@@ -16,6 +16,13 @@ class MailQueueService extends Controller
         return response()->json(['answer' => $message]);
     }
 
+    public function showstatus($status)
+    {
+        $message = MailQueue::all()->where('status', $status);
+
+        return response()->json(['answer' => $message]);
+    }
+    
     public function show($id)
     {
         $message = MailQueue::findorFail($id);

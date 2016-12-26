@@ -22,7 +22,11 @@ class mailToBase
     }
 
 
-  
+    public function setMethod($method)
+    {
+        $this->method = $method;
+        return $this;
+    }
 
     public function setCommand($command)
     {
@@ -72,6 +76,7 @@ class mailToBase
         $properties = get_class_vars(__CLASS__);
 
         unset($properties['url']);
+        unset($properties['method']);
 
         foreach ($properties as $key => $value) {
 
@@ -86,12 +91,12 @@ class mailToBase
 
     }
 
-    public function sendRequest($method, $urlpath)
+    public function sendRequest($urlpath = null)
     {
         
         $curl = curl_init($this->url . '/' . $urlpath);
 
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper($this->getMethod()));
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper($this->method));
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
@@ -109,7 +114,7 @@ class mailToBase
 
         } else {
 
-            return $data->answer;
+            return $data;
 
         }
     }

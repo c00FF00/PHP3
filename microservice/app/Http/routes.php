@@ -13,5 +13,6 @@
 
 $app->post('/message', 'MailQueueService@create');
 $app->get('/message', 'MailQueueService@index');
-$app->get('/message/{id}', 'MailQueueService@show');
-$app->put('/message/{id:[\d]+}', 'MailQueueService@update');
+$app->get('/message/{id:[0-9]+}', 'MailQueueService@show');
+$app->get('/message/status/{status}', 'MailQueueService@showstatus');
+$app->put('/message/{id:[0-9]+}', 'MailQueueService@update');
