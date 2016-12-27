@@ -9,7 +9,7 @@ class MailQueue extends Model
 {
     protected $table = 'queue';
     protected $fillable = [
-        '$message_id',
+        '$user_id',
         '$email_to',
         '$message_body',
         '$message_pattern',

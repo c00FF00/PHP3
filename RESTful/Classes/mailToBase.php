@@ -6,7 +6,7 @@ class mailToBase
 {
 
     protected $url;
-    protected $message_id = '';
+    protected $user_id = '';
     protected $email_to = '';
     protected $message_body = '';
     protected $message_pattern = '';
@@ -40,9 +40,9 @@ class mailToBase
     }
 
 
-    public function setMessageId()
+    public function setUserId($user_id)
     {
-        $this->message_id = microtime(true);
+        $this->user_id = $user_id;
         return $this;
     }
 

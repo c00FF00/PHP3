@@ -2,102 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22921149-0e3a-4270-8197-35858dcd3d7d" name="Default" comment="Work....">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RESTful/Lib/ServiceHelpers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RESTful/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RESTful/microserviceClient.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/.env.example" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Console/Kernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Exceptions/Handler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/Auth/ForgotPasswordController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/Auth/LoginController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/Auth/RegisterController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/Auth/ResetPasswordController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/Controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Controllers/MailService.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Kernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Middleware/EncryptCookies.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Http/Middleware/VerifyCsrfToken.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Mail/Message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/MailQueue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Providers/AppServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Providers/AuthServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Providers/BroadcastServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Providers/EventServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/app/Providers/RouteServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/artisan" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/bootstrap/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/bootstrap/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/bootstrap/cache/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/auth.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/broadcasting.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/compile.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/filesystems.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/queue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/services.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/session.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/config/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/factories/ModelFactory.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/migrations/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/migrations/2016_12_23_080233_mailqueue.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/seeds/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/database/seeds/DatabaseSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/phpunit.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/public/web.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/assets/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/assets/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/assets/js/components/Example.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/assets/sass/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/assets/sass/app.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/lang/en/auth.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/lang/en/pagination.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/lang/en/passwords.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/lang/en/validation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/views/email/message.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/views/errors/503.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/resources/views/vendor/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/routes/api.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/routes/console.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/routes/web.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/server.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/app/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/app/public/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/framework/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/framework/cache/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/framework/sessions/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/framework/views/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/storage/logs/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/tests/ExampleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mailservice/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/microservice/RESTful/Classes/ServiceHelpers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/microservice/RESTful/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/microservice/RESTful/microserviceClient.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservice/RESTful/Classes/Mailer.php" afterPath="$PROJECT_DIR$/RESTful/Classes/Mailer.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservice/RESTful/Classes/Message.php" afterPath="$PROJECT_DIR$/RESTful/Classes/Message.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservice/RESTful/Classes/mailToBase.php" afterPath="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservice/RESTful/composer.lock" afterPath="$PROJECT_DIR$/RESTful/composer.lock" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservice/RESTful/templates/message.view.php" afterPath="$PROJECT_DIR$/RESTful/templates/message.view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PHP3.iml" afterPath="$PROJECT_DIR$/.idea/PHP3.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" afterPath="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservice/app/MailQueue.php" afterPath="$PROJECT_DIR$/microservice/app/MailQueue.php" />
     </list>
     <ignored path="PHP3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,6 +25,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MailQueue.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservice/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -143,17 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mailer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SWIFTMailerTest/Mailer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="microserviceClient.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="microserviceClient.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/microserviceClient.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -196,8 +102,8 @@
       <file leaf-file-name="mailToBase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="798">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -239,7 +145,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RESTful/microserviceSender.php" />
-        <option value="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
         <option value="$PROJECT_DIR$/microservice/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/microservice/app/Http/Controllers/MailQueueService.php" />
         <option value="$PROJECT_DIR$/RESTful/Classes/ServiceHelpers.php" />
@@ -258,6 +163,8 @@
         <option value="$PROJECT_DIR$/microservice/RESTful/Classes/ServiceHelpers.php" />
         <option value="$PROJECT_DIR$/microservice/RESTful/composer.json" />
         <option value="$PROJECT_DIR$/microservice/RESTful/microserviceClient.php" />
+        <option value="$PROJECT_DIR$/microservice/app/MailQueue.php" />
+        <option value="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
       </list>
     </option>
   </component>
@@ -308,16 +215,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="PHP3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP3" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -388,7 +285,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482734951988</updated>
       <workItem from="1482734953424" duration="11178000" />
-      <workItem from="1482821491425" duration="5264000" />
+      <workItem from="1482821491425" duration="5676000" />
     </task>
     <task id="LOCAL-00001" summary="Полностью рабочая серверная часть микросервиса.&#10;&#10;Работоспособный клиент.&#10;&#10;Задача - логика для клиента. Отправка сообщений. Сделать шаблон.">
       <created>1482738615055</created>
@@ -415,7 +312,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16442000" />
+    <option name="totallyTimeSpent" value="16854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="28" width="1910" height="1051" extended-state="0" />
@@ -552,14 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/microserviceSender.php" />
     <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,14 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/Classes/Message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -689,6 +570,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
