@@ -11,9 +11,9 @@ class Mailer extends Swift
         $this->mailer = Swift_Mailer::newInstance(Swift_SmtpTransport::newInstance($smtpHost, $port));
     }
 
-    public function setContent($obj)
+    public function setContent($content)
     {
-        $this->content = $obj;
+        $this->content = $content;
         return $this;
     }
 

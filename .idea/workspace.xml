@@ -91,8 +91,8 @@
       <file leaf-file-name="Mailer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RESTful/Classes/Mailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+            <state relative-caret-position="285">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -362,7 +362,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482734951988</updated>
       <workItem from="1482734953424" duration="11178000" />
-      <workItem from="1482821491425" duration="6087000" />
+      <workItem from="1482821491425" duration="6144000" />
     </task>
     <task id="LOCAL-00001" summary="Полностью рабочая серверная часть микросервиса.&#10;&#10;Работоспособный клиент.&#10;&#10;Задача - логика для клиента. Отправка сообщений. Сделать шаблон.">
       <created>1482738615055</created>
@@ -389,10 +389,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17265000" />
+    <option name="totallyTimeSpent" value="17322000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="28" width="1910" height="1051" extended-state="0" />
+    <frame x="1" y="28" width="1910" height="1051" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19506967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -661,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/Classes/Mailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        <state relative-caret-position="285">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
           <folding />
         </state>
       </provider>
