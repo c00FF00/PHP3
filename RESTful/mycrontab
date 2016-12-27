@@ -1,0 +1,6 @@
+PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+# It is mailing of emailss
+*/5 * * * * root php /path/to/microserviceClient.php > /dev/null
+
+
