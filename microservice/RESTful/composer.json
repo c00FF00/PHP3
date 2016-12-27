@@ -1,6 +1,0 @@
-{
-    "require": {
-        "swiftmailer/swiftmailer": "^5.4",
-        "philo/laravel-blade": "^3.1"
-    }
-}
