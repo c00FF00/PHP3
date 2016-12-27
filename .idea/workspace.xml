@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22921149-0e3a-4270-8197-35858dcd3d7d" name="Default" comment="Work....">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RESTful/Classes/Mailer.php" afterPath="$PROJECT_DIR$/RESTful/Classes/Mailer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RESTful/Classes/Message.php" afterPath="$PROJECT_DIR$/RESTful/Classes/Message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" afterPath="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservice/app/MailQueue.php" afterPath="$PROJECT_DIR$/microservice/app/MailQueue.php" />
     </list>
     <ignored path="PHP3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MailQueue.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MailQueue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
@@ -62,14 +63,14 @@
       <file leaf-file-name="microserviceClient.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/microserviceClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-86">
               <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.view.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="message.view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RESTful/templates/message.view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -92,8 +93,8 @@
       <file leaf-file-name="Mailer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/Classes/Mailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="655">
+              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -102,8 +103,8 @@
       <file leaf-file-name="mailToBase.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="598">
+              <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -112,8 +113,8 @@
       <file leaf-file-name="Message.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RESTful/Classes/Message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="674">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,8 +153,6 @@
         <option value="$PROJECT_DIR$/RESTful/Classes/Template.php" />
         <option value="$PROJECT_DIR$/RESTful/templates/message.view.php" />
         <option value="$PROJECT_DIR$/RESTful/microserviceClient.php" />
-        <option value="$PROJECT_DIR$/RESTful/Classes/Message.php" />
-        <option value="$PROJECT_DIR$/RESTful/Classes/Mailer.php" />
         <option value="$PROJECT_DIR$/microservice/RESTful/Classes/Message.php" />
         <option value="$PROJECT_DIR$/microservice/RESTful/Classes/Mailer.php" />
         <option value="$PROJECT_DIR$/microservice/RESTful/Helpers/Classes/mailToBase.php" />
@@ -164,7 +163,9 @@
         <option value="$PROJECT_DIR$/microservice/RESTful/composer.json" />
         <option value="$PROJECT_DIR$/microservice/RESTful/microserviceClient.php" />
         <option value="$PROJECT_DIR$/microservice/app/MailQueue.php" />
+        <option value="$PROJECT_DIR$/RESTful/Classes/Mailer.php" />
         <option value="$PROJECT_DIR$/RESTful/Classes/mailToBase.php" />
+        <option value="$PROJECT_DIR$/RESTful/Classes/Message.php" />
       </list>
     </option>
   </component>
@@ -215,6 +216,84 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="PHP3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTful" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTful" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTful" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RESTful" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -285,7 +364,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482734951988</updated>
       <workItem from="1482734953424" duration="11178000" />
-      <workItem from="1482821491425" duration="5676000" />
+      <workItem from="1482821491425" duration="6036000" />
     </task>
     <task id="LOCAL-00001" summary="Полностью рабочая серверная часть микросервиса.&#10;&#10;Работоспособный клиент.&#10;&#10;Задача - логика для клиента. Отправка сообщений. Сделать шаблон.">
       <created>1482738615055</created>
@@ -312,7 +391,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16854000" />
+    <option name="totallyTimeSpent" value="17214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="28" width="1910" height="1051" extended-state="0" />
@@ -506,26 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RESTful/Lib/ServiceHelpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESTful/templates/message.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -550,42 +613,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/Classes/Mailer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESTful/Classes/Message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RESTful/microserviceClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="655">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RESTful/Classes/mailToBase.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="598">
+          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservice/app/MailQueue.php">
+    <entry file="file://$PROJECT_DIR$/RESTful/Classes/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESTful/microserviceClient.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-86">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESTful/Lib/ServiceHelpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RESTful/templates/message.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Message
 {
 
@@ -11,7 +9,6 @@ class Message
 
     public function __construct($name, $message, $pathtotemplate)
     {
-
         if (is_file($pathtotemplate)) {
 
             $this->name = $name;
@@ -26,8 +23,6 @@ class Message
             $this->template = false;
 
         }
-
-
     }
 
     public function message()

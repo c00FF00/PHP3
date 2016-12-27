@@ -1,7 +1,5 @@
 <?php
 
-
-
 class mailToBase
 {
 
@@ -20,7 +18,6 @@ class mailToBase
 	$this->url = 'http://' . $host . ':' . $port;
     }
 
-
     public function setMethod($method)
     {
         $this->method = $method;
@@ -38,7 +35,6 @@ class mailToBase
         $this->status = $status;
         return $this;
     }
-
 
     public function setUserId($user_id)
     {

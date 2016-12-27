@@ -17,8 +17,6 @@ class Mailer extends Swift
         return $this;
     }
 
-
-
     public function Compose($to, $from, $subject)
     {
 
