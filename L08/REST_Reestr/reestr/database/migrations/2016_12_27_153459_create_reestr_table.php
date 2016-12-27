@@ -15,20 +15,20 @@ class CreateReestrTable extends Migration
     {
         Schema::create('reestr', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('g00');
-            $table->string('g01');
-            $table->string('g02');
-            $table->string('g03');
-            $table->string('g04');
-            $table->string('g05');
-            $table->string('g06');
-            $table->string('g07');
-            $table->string('g08');
-            $table->string('g09');
-            $table->string('g10');
-            $table->string('g11');
-            $table->string('g12');
-            $table->string('g13');
+            $table->bigInteger('g00')->nullable();
+            $table->string('g01')->nullable();
+            $table->string('g02')->nullable();
+            $table->string('g03')->nullable();
+            $table->string('g04')->nullable();
+            $table->string('g05')->nullable();
+            $table->string('g06')->nullable();
+            $table->string('g07')->nullable();
+            $table->string('g08')->nullable();
+            $table->string('g09')->nullable();
+            $table->string('g10')->nullable();
+            $table->string('g11')->nullable();
+            $table->string('g12')->nullable();
+            $table->string('g13')->nullable();
             $table->timestamps();
         });
     }
