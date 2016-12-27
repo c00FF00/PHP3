@@ -25,8 +25,6 @@ class Mailer extends Swift
              ->setFrom($from)
              ->setTo($to)
              ->setBody($this->content, 'text/html');
-
-
     }
 
     public function Send()
