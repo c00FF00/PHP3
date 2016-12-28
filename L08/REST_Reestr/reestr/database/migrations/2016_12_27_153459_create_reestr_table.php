@@ -15,20 +15,20 @@ class CreateReestrTable extends Migration
     {
         Schema::create('reestr', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('g00')->nullable();
-            $table->string('g01')->nullable();
-            $table->string('g02')->nullable();
-            $table->string('g03')->nullable();
-            $table->string('g04')->nullable();
-            $table->string('g05')->nullable();
-            $table->string('g06')->nullable();
-            $table->string('g07')->nullable();
-            $table->string('g08')->nullable();
-            $table->string('g09')->nullable();
-            $table->string('g10')->nullable();
-            $table->string('g11')->nullable();
-            $table->string('g12')->nullable();
-            $table->string('g13')->nullable();
+            $table->bigInteger('number_of_the_record')->nullable();
+            $table->string('full_name')->nullable();
+            $table->date('date_of_birth');
+            $table->string('place_of_birth', 255)->nullable();
+            $table->string('name_of_the_organization', 255)->nullable();
+            $table->bigInteger('number_of_the_organization')->nullable();
+            $table->string('post_of_the_person', 64)->nullable();
+            $table->string('administrative_code', 255)->nullable();
+            $table->string('punitive_organization', 255)->nullable();
+            $table->string('name of_the_judge', 255)->nullable();
+            $table->string('position_of_the_judge', 56)->nullable();
+            $table->string('period_of_ineligibility', 56)->nullable();
+            $table->date('start_date');
+            $table->date('date_of_expiry');
             $table->timestamps();
         });
     }

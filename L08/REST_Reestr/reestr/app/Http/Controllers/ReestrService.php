@@ -13,8 +13,7 @@ class ReestrService extends Controller
     {
 
         $record = new Reestr();
-        $record->g02 = $request->password;
-        $record->save();
+
         return response()->json(['answer' => $record]);
     }
 

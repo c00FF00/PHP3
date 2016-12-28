@@ -1,0 +1,16 @@
+Наименование таблицы;;;Field name;"English
+name";description;field Type;unique;obligatory;length;The number of decimal places;Link to another table (the table name and field communication)
+Реестр дисквалифицированных лиц;;G1;Номер записи из реестра дисквалифицированных лиц;The number of the record from the register of disqualified persons;Номер записи из реестра дисквалифицированных лиц;Number;Yes;Yes;12;;
+;;G2;ФИО;Full name;Фамилия Имя Отчетство;Text;Yes;Yes;56;;
+;;G3;Дата рождения ФЛ;Date of birth of the person;Дата рождения физического лица;Date;Yes;Yes;10;;
+;;G4;Место рождения ФЛ;Place of birth;Место рождения физического лица;Text;Yes;Yes;256;;
+;;G5;Наименование организации, где ФЛ работало во время совершения правонарушения;Name of the organization where the person worked during the time of the offence;Наименование организации, где физическое лицо работало во время совершения правонарушения;Symbol;Yes;Yes;256;;
+;;G6;ИНН организации;Identification number of the organization;Идентификационный номер налогоплательщика - юридического лица;Number;Yes;Yes;12;;
+;;G7;Должность, в которой ФЛ работало во время совершения правонарушения;The post in which the person worked during the time of the offence;Должность, в которой физическое лицо работало во время совершения правонарушения;Formatted text;No;No;56;;
+;;G8;Cтатья КоАП РФ;Article of the administrative code, providing for administrative responsibility for committing an administrative offense;Cтатья Кодекса Российской Федерации об административных правонарушениях, предусматривающая административную ответственность за совершение административного правонарушения;Symbol;No;No;256;;
+;;G9;Наименование органа, составившего протокол об административном правонарушении;Name of the organization who made the Protocol on an administrative offence;Наименование организации, составившего протокол об административном правонарушении;Formatted text;Yes;Yes;256;;
+;;G10;ФИО судьи, вынесшего постановление о дисквалификации;Full name of the judge who made the decision on disqualification;Фамилия Имя Отчетство судьи, вынесшего постановление о дисквалификации;Text;Yes;Yes;256;;
+;;G11;Должность судьи;The position of the judge;Должность судьи, вынесшего постановление о дисквалификации;Text;No;No;56;;
+;;G12;Cрок дисквалификации;The period of Ineligibility ;Cрок дисквалификации (с учетом сведений о пересмотре);Period;Yes;Yes;56;;
+;;G13;Дата начала;Start date;Дата начала (с учетом сведений о пересмотре);Date;No;No;56;;
+;;G14;Дата окончания;Date of expiry of the period of Ineligibility;Дата истечения срока дисквалификации (с учетом сведений о пересмотре);Date;No;Yes;56;;
