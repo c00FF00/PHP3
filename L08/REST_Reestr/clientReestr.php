@@ -2,17 +2,19 @@
 
 require_once __DIR__ . '/HelperLib.php';
 
-$urlpagereestr = 'https://www.nalog.ru/opendata/7707329152-registerdisqualified';
+$conf = include __DIR__ . '/config.php';
 
-$curl = curl_init('http://esso.ru/create');
+$curl = curl_init($conf['urlAPI']);
 
-curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper('post'));
+curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
 
 curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-$reestr = file(makeRegisterdisqualifiedURL($urlpagereestr), FILE_SKIP_EMPTY_LINES);
+$fullurl = makeRegisterdisqualifiedURL($conf['urlPage'], $conf['csvPattern']);
+
+$reestr = file($fullurl, FILE_SKIP_EMPTY_LINES);
 
 unset($reestr[0]);
 
@@ -40,7 +42,8 @@ foreach ($reestr as $stro) {
     $data['position_of_the_judge'] = $temp[10];
     $data['period_of_ineligibility'] = $temp[11];
     $data['start_date'] = formatDate($temp[12]);
-    $data['date_of_expiry'] = formatDate(removeControlCharacter($temp[13]));
+    $date_of_expiry = removeControlCharacter($temp[13]);
+    $data['date_of_expiry'] = formatDate($date_of_expiry);
 
     $jsonData = json_encode($data);
 

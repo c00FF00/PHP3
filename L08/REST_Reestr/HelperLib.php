@@ -5,7 +5,7 @@
  * @param $urlpage
  * @return fullurlpath
  */
-function makeRegisterdisqualifiedURL($urlpage)
+function makeRegisterdisqualifiedURL($urlpage, $pattern)
 {
 
     $content = file_get_contents($urlpage);
@@ -30,7 +30,7 @@ function makeRegisterdisqualifiedURL($urlpage)
  */
 function formatDate($russianDate)
 {
-    return implode('-', array_reverse(explode('.', $russianDate)));;
+    return implode('-', array_reverse(explode('.', $russianDate)));
 }
 
 
