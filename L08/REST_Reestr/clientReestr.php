@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/getReestr.php';
+require_once __DIR__ . '/HelperLib.php';
 
 $urlpagereestr = 'https://www.nalog.ru/opendata/7707329152-registerdisqualified';
 
@@ -14,13 +14,13 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 $reestr = file(getRegisterdisqualified($urlpagereestr), FILE_SKIP_EMPTY_LINES);
 
+unset($reestr[0]);
+
 $counAll = count($reestr);
 
 $count = 1;
 
 $data = [];
-
-$badsymbol = ["\r\n", "\n", "\r"];
 
 echo 'All records: ' . $counAll;
 echo PHP_EOL;
@@ -40,7 +40,7 @@ foreach ($reestr as $stro) {
     $data['position_of_the_judge'] = $temp[10];
     $data['period_of_ineligibility'] = $temp[11];
     $data['start_date'] = formatDate($temp[12]);
-    $data['date_of_expiry'] = formatDate(str_replace($badsymbol, '', $temp[13]));
+    $data['date_of_expiry'] = formatDate(removeControlCharacter($temp[13]));
 
     $jsonData = json_encode($data);
 
