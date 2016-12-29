@@ -24,7 +24,7 @@ class CreateReestrTable extends Migration
             $table->string('post_of_the_person', 64)->nullable();
             $table->string('administrative_code', 255)->nullable();
             $table->string('punitive_organization', 255)->nullable();
-            $table->string('name of_the_judge', 255)->nullable();
+            $table->string('name_of_the_judge', 255)->nullable();
             $table->string('position_of_the_judge', 56)->nullable();
             $table->string('period_of_ineligibility', 56)->nullable();
             $table->date('start_date');

@@ -18,7 +18,7 @@ class Reestr extends Model
         'post_of_the_person',
         'administrative_code',
         'punitive_organization',
-        'name of_the_judge',
+        'name_of_the_judge',
         'position_of_the_judge',
         'period_of_ineligibility',
         'start_date',

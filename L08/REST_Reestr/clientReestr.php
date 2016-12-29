@@ -1,33 +1,64 @@
 <?php
 
 
-//$curl = curl_init('https://www.nalog.ru/opendata/7707329152-registerdisqualified/data-25122016-structure-24062015.csv');
+$curl = curl_init('http://localhost/create');
 
-curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper('get'));
+curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper('post'));
 
-//curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
-//
-//curl_setopt($curl, CURLOPT_POSTFIELDS, $this->getJsonData());
+curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
-//curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-//$result = curl_exec($curl);
+$reestr = file('https://www.nalog.ru/opendata/7707329152-registerdisqualified/data-25122016-structure-24062015.csv', FILE_SKIP_EMPTY_LINES);
 
-//$reestr = explode(PHP_EOL, $result);
+$counAll = count($reestr);
 
-$reestr = file_get_contents('https://www.nalog.ru/opendata/7707329152-registerdisqualified/data-25122016-structure-24062015.csv');
+$count = 1;
 
-$count = 0;
+$data = [];
 
-$res = explode("\n",$reestr);
+$badsymbol = ["\r\n", "\n", "\r"];
 
-foreach ($res as $stro) {
-    print_r(explode(';', $stro));
+
+echo 'All records: ' . $counAll;
+echo PHP_EOL;
+
+foreach ($reestr as $stro) {
+    $temp = explode(';', $stro);
+    $data['number_of_the_record'] = $temp[0];
+    $data['full_name'] = $temp[1];
+    $data['date_of_birth'] = $temp[2];
+    $data['place_of_birth'] = $temp[3];
+    $data['name_of_the_organization'] = $temp[4];
+    $data['number_of_the_organization'] = $temp[5];
+    $data['post_of_the_person'] = $temp[6];
+    $data['administrative_code'] = $temp[7];
+    $data['punitive_organization'] = $temp[8];
+    $data['name_of_the_judge'] = $temp[9];
+    $data['position_of_the_judge'] = $temp[10];
+    $data['period_of_ineligibility'] = $temp[11];
+    $data['start_date'] = $temp[12];
+    $data['date_of_expiry'] = str_replace($badsymbol, '', $temp[13]);
+
+    $jsonData = json_encode($data);
+
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $jsonData);
+
+    $result = curl_exec($curl);
+
+    $response = json_decode($result);
+
+
+
+    if ('saved' == $response->answer) {
+        echo 'Saved record: ' . $count; echo "\r";
+    } else {
+        echo 'Get Error: ', $response->answer;
+    }
+
     $count++;
 }
 
-echo $count;
-
-
+echo PHP_EOL;
 
 
