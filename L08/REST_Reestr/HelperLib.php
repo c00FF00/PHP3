@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @param $urlpage
  * @return fullurlpath
@@ -9,7 +8,7 @@ function makeRegisterdisqualifiedURL($urlpage, $pattern)
 {
 
     $content = file_get_contents($urlpage);
-    
+
     if (preg_match('/' . $pattern . '/', $content, $match)) {
 
         return $urlpage . '/' . $match[0];
