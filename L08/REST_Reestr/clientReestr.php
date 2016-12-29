@@ -1,7 +1,10 @@
 <?php
 
+require_once __DIR__ . '/getReestr.php';
 
-$curl = curl_init('http://localhost/create');
+$urlpagereestr = 'https://www.nalog.ru/opendata/7707329152-registerdisqualified';
+
+$curl = curl_init('http://esso.ru/create');
 
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, strtoupper('post'));
 
@@ -9,7 +12,7 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-$reestr = file('https://www.nalog.ru/opendata/7707329152-registerdisqualified/data-25122016-structure-24062015.csv', FILE_SKIP_EMPTY_LINES);
+$reestr = file(getRegisterdisqualified($urlpagereestr), FILE_SKIP_EMPTY_LINES);
 
 $counAll = count($reestr);
 
@@ -18,7 +21,6 @@ $count = 1;
 $data = [];
 
 $badsymbol = ["\r\n", "\n", "\r"];
-
 
 echo 'All records: ' . $counAll;
 echo PHP_EOL;
@@ -41,19 +43,17 @@ foreach ($reestr as $stro) {
     $data['date_of_expiry'] = str_replace($badsymbol, '', $temp[13]);
 
     $jsonData = json_encode($data);
-
+    
     curl_setopt($curl, CURLOPT_POSTFIELDS, $jsonData);
 
     $result = curl_exec($curl);
 
     $response = json_decode($result);
 
-
-
     if ('saved' == $response->answer) {
         echo 'Saved record: ' . $count; echo "\r";
     } else {
-        echo 'Get Error: ', $response->answer;
+        echo 'Get Error:    ' . $response->answer; echo PHP_EOL;
     }
 
     $count++;
