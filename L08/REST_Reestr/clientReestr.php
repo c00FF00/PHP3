@@ -12,7 +12,7 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type: application/json']);
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-$reestr = file(getRegisterdisqualified($urlpagereestr), FILE_SKIP_EMPTY_LINES);
+$reestr = file(makeRegisterdisqualifiedURL($urlpagereestr), FILE_SKIP_EMPTY_LINES);
 
 unset($reestr[0]);
 
