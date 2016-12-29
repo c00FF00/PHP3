@@ -4,17 +4,24 @@
 function getRegisterdisqualified($urlpage)
 {
 
-$content = file_get_contents($urlpage);
+    $content = file_get_contents($urlpage);
 
-$pattern = '/data-[0-9]{8}-structure-[0-9]{8}.csv/';
+    $pattern = '/data-[0-9]{8}-structure-[0-9]{8}.csv/';
 
+    if (preg_match($pattern, $content, $match)) {
 
-if (preg_match($pattern, $content, $match)) {
+        return $urlpage . '/' . $match[0];
 
-return $urlpage . '/' . $match[0];
-
-} else { return null;  }
-
+    } else {
+        return null;
+    }
 
 
 }
+
+
+function formatDate($russianDate)
+{
+    return implode('-', array_reverse(explode('.', $russianDate)));;
+}
+
