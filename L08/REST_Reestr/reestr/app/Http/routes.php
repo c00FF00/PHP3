@@ -17,5 +17,5 @@ $app->get('/', function () use ($app) {
 
 
 
-$app->post('create', 'ReestrService@create');
+$app->post('api/create', 'ReestrService@create');
 

@@ -4,7 +4,7 @@ require_once __DIR__ . '/HelperLib.php';
 
 $conf = include __DIR__ . '/config.php';
 
-$curl = curl_init($conf['urlAPI']);
+$curl = curl_init($conf['urlAPI'] . '/create');
 
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'POST');
 
